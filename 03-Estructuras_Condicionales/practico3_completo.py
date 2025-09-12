@@ -1,44 +1,38 @@
 #ejercicio 1
-edad = int(input("Ingrese su edad: "))
+edad= int(input("ingrese su edad: "))
 
-if edad > 18:
-    print("Es mayor de edad")
-else:
-    print("No es mayor de edad")
+if edad > 18 :
+    print ("es mayor de edad")
 
 #ejercicio 2
-nota = int(input("Ingrese su nota: "))
-
-if nota >= 6:
-    print("Aprobado")
+nota=int(input("ingrese su nota: "))
+if nota>=6:
+    print ("aprobado")
 else:
-    print("Desaprobado")
+    print ("desaprobado")
 
 #ejercicio 3
-numero = int(input("Ingrese un número par: "))
-
-if numero % 2 == 0:
-    print("Ha ingresado un número par")
-else:
-    print("Por favor, ingrese un número par")
+num=int(input("ingrese un numero par: "))
+if num%2==0 :
+    print("ha ingreesado un numero par")
+else: 
+    print ("por favor, ingrese un numero par")
 
 #ejercicio 4
-edad = int(input("Ingrese su edad: "))
-
-if edad < 12:
-    print("Niño/a")
-elif edad < 18:
-    print("Adolescente")
-elif edad < 30:
-    print("Adulto/a joven")
-else:
-    print("Adulto/a")
+edad=int(input("ingrese su edad: "))
+if edad<12:
+    print("niño")
+elif edad>=12 and edad<18 :
+    print("adolescente")
+elif edad>=18 and edad <30 :
+    print("adulto/joven")
+elif edad>=30 : 
+    print("adulto")
 
 #ejercicio 5
-contraseña = input("Ingrese su contraseña: ")
-
-if 8 <= len(contraseña) <= 14:
-    print("Ha ingresado una contraseña correcta")
+palabra= input("ingrese una contraseña entre 8 y 14 caracteres: ")
+if len(palabra)>=8 and len(palabra)<=14 :
+    print ("ha ingresado una contraseña correcta")
 else:
     print("Por favor, ingrese una contraseña de entre 8 y 14 caracteres")
 
@@ -46,59 +40,67 @@ else:
 import random
 from statistics import mode, median, mean
 
-numeros_aleatorios = [random.randint(1, 100) for i in range(50)]
+num_aleatorio= [random.randint(1,100)for i in range (10)]
+moda= mode(num_aleatorio)
+mediana=median(num_aleatorio)
+media=mean(num_aleatorio)
+print (num_aleatorio)
+print (moda)
+print(mediana)
+print (media)
 
-moda = mode(numeros_aleatorios)
-mediana = median(numeros_aleatorios)
-media = mean(numeros_aleatorios)
-
-print("Números:", numeros_aleatorios)
-print("Moda:", moda)
-print("Mediana:", mediana)
-print("Media:", media)
-
-if media > mediana > moda:
-    print("Sesgo positivo (a la derecha)")
-elif media < mediana < moda:
-    print("Sesgo negativo (a la izquierda)")
-else:
-    print("Sin sesgo")
+if moda==mediana==media :
+    print("sin sesgo")
+elif media>mediana and mediana>moda :
+    print ("Sesgo positivo o a la derecha")
+elif media<mediana and mediana<moda : 
+    print("Sesgo negativo o a la izquierda")
+else : 
+    print ("fin")
 
 #ejercicio 7
-frase = input("Ingrese una frase o palabra: ")
+palabra= input("ingrese una palabra o frase: ")
 
-if frase[-1].lower() in "aeiou":
-    frase += "!"
-print(frase)
+if palabra [-1].lower() in "aeiou":
+    palabra_final= palabra + "!"
+    print (palabra_final)
+else:
+    print (palabra)
 
 #ejercicio 8
-nombre = input("Ingrese su nombre: ")
-opcion = int(input("Ingrese 1 (MAYÚSCULAS), 2 (minúsculas) o 3 (Primera Letra Mayúscula): "))
+nombre=input("ingrese su nombre: ")
 
+print("--------------OPCIONES---------------")
+print("1. Si quiere su nombre en mayúsculas.")
+print("2. Si quiere su nombre en minúsculas.")
+print("3. Si quiere su nombre con la primera letra mayúscula.")
+opcion= int(input("seleccione el numero de la opcion que desee:"))
 if opcion == 1:
-    print(nombre.upper())
-elif opcion == 2:
-    print(nombre.lower())
-elif opcion == 3:
-    print(nombre.title())
+    nombrefinal= nombre.upper()
+    print (nombrefinal)
+elif opcion==2:
+    nombrefinal=nombre.lower()
+    print (nombrefinal)
+elif opcion==3:
+    nombrefinal=nombre.title()
+    print(nombrefinal)
 else:
-    print("Opción inválida")
+    print("opcion no disponible. ingrese 1,2 o 3")
 
 #ejercicio 9 
-magnitud = float(input("Ingrese la magnitud del terremoto: "))
-
-if magnitud < 3:
-    print("Muy leve (imperceptible)")
-elif magnitud < 4:
-    print("Leve (ligeramente perceptible)")
-elif magnitud < 5:
-    print("Moderado (sentido por personas, pero generalmente no causa daños)")
-elif magnitud < 6:
-    print("Fuerte (puede causar daños en estructuras débiles)")
-elif magnitud < 7:
-    print("Muy Fuerte (puede causar daños significativos)")
+terremoto=int(input("ingrese la magnitud del terremoto: "))
+if terremoto<3:
+    print("Muy leve")
+elif terremoto>=3 and terremoto<4 :
+    print("Leve")
+elif terremoto>=4 and terremoto<5:
+    print("Moderado")
+elif terremoto>=5 and terremoto<6 :
+    print("Fuerte")
+elif terremoto>=6 and terremoto<7 :
+    print("Muy fuerte")
 else:
-    print("Extremo (puede causar graves daños a gran escala)")
+    print("Extremo")
 
 #ejercicio 10
 hemisferio = input("¿En qué hemisferio se encuentra? (N/S): ").upper()
