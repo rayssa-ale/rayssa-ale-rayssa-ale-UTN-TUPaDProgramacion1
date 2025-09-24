@@ -12,7 +12,7 @@
 
 terremoto=int(input("ingrese la magnitud del terremoto: "))
 if terremoto<3:
-    print("muy leve")
+    print("Muy leve")
 elif terremoto>=3 and terremoto<4 :
     print("Leve")
 elif terremoto>=4 and terremoto<5:
